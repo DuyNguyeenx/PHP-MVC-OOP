@@ -1,0 +1,10 @@
+{
+    "name": "duyng/mvc",
+    "description": "duyng <duynhph24103@fpt.edu.vn>",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
