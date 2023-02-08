@@ -1,0 +1,10 @@
+{
+    "name": "duyng/bai4",
+    "description": "mvc",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
