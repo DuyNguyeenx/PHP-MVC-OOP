@@ -1,14 +1,29 @@
 <?php
+
 namespace App\Controllers;
-class HomeController extends Controller{
-    public function index(){
+
+use App\Models\ProductModel;
+
+class HomeController extends Controller
+{
+    public function index()
+    {
         $product = [
-            'name' => 'iphone',
-            'price' => 1000,
+            'name' => 'Iphone',
+            'price' => 1000
         ];
-        $this->view('home',['product' => $product]);
+        $this->view('home', ['product' => $product]);
     }
-    public function contact(){
+
+    public function contact()
+    {
         $this->view('contact');
+    }
+
+    public function show()
+    {
+        $products = ProductModel::all();
+        // var_dump($products);
+        $this->view('site/showproduct', ['products' => $products]);
     }
 }

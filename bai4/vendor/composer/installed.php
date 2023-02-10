@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'duyng/bai4',
+        'name' => 'bqngo/bai4',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => NULL,
@@ -10,7 +10,7 @@
         'dev' => true,
     ),
     'versions' => array(
-        'duyng/bai4' => array(
+        'bqngo/bai4' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => NULL,

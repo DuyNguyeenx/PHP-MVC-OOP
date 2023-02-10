@@ -1,3 +1,4 @@
-<h1>home page</h1>
+<h1>HOME PAGE</h1>
 <?php
 var_dump($product);
+?>

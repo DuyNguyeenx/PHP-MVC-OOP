@@ -14,10 +14,11 @@ class Router
     {
         static::$routes['post'][$path] = $callback;
     }
+
     public function getPath()
     {
         $path = $_SERVER['REQUEST_URI'];
-        $path = str_replace('/php2/bai4/public/', "/", $path);
+        $path = str_replace('/php2/PHP-MVC/bai4/public/', "/", $path);
         $postion = strpos($path, '?');
         if ($postion) {
             $path = substr($path, 0, $postion);
@@ -38,10 +39,12 @@ class Router
         if (isset(static::$routes[$method][$path])) {
             $callback = static::$routes[$method][$path];
         }
+
         if ($callback === false) {
-            echo "404 NOT Found";
+            echo "404 FILE NOT found!";
             return 0;
         }
+
         if (is_callable($callback)) {
             return $callback();
         }
@@ -51,7 +54,5 @@ class Router
             $class = new $class;
             return call_user_func_array([$class, $action], []);
         }
-        // $callback();
-        // echo $path;
     }
 }
