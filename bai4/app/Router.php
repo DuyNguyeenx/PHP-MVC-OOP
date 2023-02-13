@@ -5,6 +5,11 @@ namespace App;
 class Router
 {
     public static $routes = [];
+     public $request;
+    public function __construct()
+    {
+        $this->request = new Request();
+    }
 
     public static function get($path, $callback)
     {
@@ -52,7 +57,7 @@ class Router
         if (is_array($callback)) {
             [$class, $action] = $callback;
             $class = new $class;
-            return call_user_func_array([$class, $action], []);
+            return call_user_func([$class, $action], $this->request);
         }
     }
 }
