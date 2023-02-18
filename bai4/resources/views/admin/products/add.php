@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="/php2/PHP-MVC/bai4/public/create-product" method="post" enctype="multipart/form-data">
+    <form action="/create-product" method="post" enctype="multipart/form-data">
         Name: <input type="text" name="name" id="">
         <br>
         Image: <input type="file" name="image" id="">

@@ -33,8 +33,12 @@ Router::get('/', function () {
 });
 Router::get('/contact', [HomeController::class, 'contact']);
 Router::get('/home', [HomeController::class, 'index']);
+Router::get('/site-prd', [HomeController::class, 'show']);
 Router::get('/product', [ProductController::class, 'index']);
 Router::get('/create-product', [ProductController::class, 'create']);
 Router::post('/create-product', [ProductController::class, 'store']);
+Router::get('/update-product',[ProductController::class,'show']);
+Router::post('/update-product',[ProductController::class,'update']);
+Router::get('/delete-product',[ProductController::class,'delete']);
 
 $router->resolve();

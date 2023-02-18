@@ -5,6 +5,7 @@ use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\CategoryController;
 use App\Controllers\UserController;
+use App\Controllers\CommentController;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 session_start();
@@ -40,4 +41,7 @@ Router::post('/admin/category-create',[CategoryController::class,'store']);
 Router::get('/admin/category-update',[CategoryController::class,'edit']);
 Router::post('/admin/category-update',[CategoryController::class,'update']);
 Router::get('/admin/category-delete',[CategoryController::class,'delete']);
+
+Router::get('/admin/comments',[CommentController::class,'index']);
+Router::get('/admin/users',[UserController::class,'index']);
 $router->resolve();

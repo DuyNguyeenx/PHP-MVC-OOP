@@ -23,10 +23,10 @@ class HomeController extends Controller
   public function detail(Request $request)
   {
     $data = $request->getBody();
-    $products = ProductModel::getOne($data['id']);
+    $products = ProductModel::findOne($data['id']);
     $categories = CategoryModel::all();
     $hds = new ProductModel;
-    $hdss = $hds->getTable('*')->wheree('category_id', $products->category_id)->limit(8)->get();
+    $hdss = $hds->getTable('*')->wheree('category_id', $products->category_id)->limit(3)->get();
     $comment = new CommentModel;
     $comments = $comment->getTable('full_name,description,comments.id,created_at,image')->Join('users')->On('id_user', 'users.id')->wheree('id_pro', $products->id)->get();
     return $this->view('site/detail', ['product' => $products, 'categories' => $categories, 'comments' => $comments, 'hds' => $hdss]);

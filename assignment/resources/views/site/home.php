@@ -22,7 +22,7 @@
           <?php foreach($products as $product) : ?>
             <div class="py-4">
               <a href="/detail?id=<?= $product->id ?>" class="text-center text-base font-bold  ">
-              <img class="mb-[20px]" src="<?= $product->images ?>" alt="">
+              <img class="mb-[20px] mx-[30px]" src="/images/<?= $product->images ?>" alt="" width="200">
                 <li><?= $product->title ?></li>
                   <li class="py-2 text-red-600"><?= $product->price ?>đ</li>
                 </a>

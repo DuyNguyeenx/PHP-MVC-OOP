@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'bqngo/bai4',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'name' => 'duyng/bai4',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '7cadceff3d7c6302626a5ca18ef8580d956849f1',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'bqngo/bai4' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+        'duyng/bai4' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '7cadceff3d7c6302626a5ca18ef8580d956849f1',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

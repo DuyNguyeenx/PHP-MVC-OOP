@@ -2,18 +2,17 @@
         <section>
             <div class="grid grid-cols-2 gap-[93px]">
                 <div>
-                    <img class="ml-[164px] mt-[100px] mb-[28px]" width="500px" src="images/anh3.png" alt="">
+                    <img class="ml-[164px] mt-[100px] mb-[28px]" width="500px" src="/images/<?= $product->images ?>" alt="">
                 </div>
                 <div class="mt-[23px]">
-                    <div class="flex"><p class="text-[24px] font-medium ">Thương hiệu: <span class="text-blue-800"><?= $product->b_name ?></span> </p>
+                    <div class="flex">
                     
-                    <p class="mx-[15px]">|</p>
+                    
                     <p class="text-[24px] font-medium ">Tình trạng: <?= $product->quantity == 0 ? "hết hàng" : "còn hàng" ?></p></div>
                     <p class="text-[36px] font-medium my-[12px]" ><?= $product->title ?></p>
                     <h3 class="text-[40px] font-bold"><?= $product->price ?>đ</h3>
-                    <input type="hidden" name="category" value="<?= $product->category_id . "|" . $product->b_name ?>">
-                    <p class="text-[24px] font-medium  w-[473px]">Chi Tiet San Pham:  <?= $product->description ?><br>
-                        
+                    <p class="text-[24px] font-medium  w-[473px]">Chi Tiết Sản Phẩm:
+                        <p class="text-[16px]"></p><?= $product->description ?></p>
                     </p>
                     <form class="text-white text-[30px] font-bold" action="/addProduct" method="post">
                     <input type="text" hidden name="title" value="<?= $product->title  ?>">

@@ -9,28 +9,34 @@
 </head>
 
 <body>
-<?php if ($message != '') : ?>
-        <div><?= $message ?></div>
-    <?php endif ?>
+<!-- <?php if ($message != '') : ?>
+        <p><?= $message ?></p>
+    <?php endif ?> -->
     <table border="1">
         <th>ID</th>
         <th>Name</th>
         <th>Image</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Ma loai</th>
         <th>
-            <a href="create-product">Thêm</a>
+            <a href="/create-product">Thêm</a>
         </th>
 
         <?php foreach ($products as $product) : ?>
             <tr>
                 <td><?= $product->id ?></td>
-                <td><?= $product->name ?></td>
+                <td><?= $product->tenhh ?></td>
                 <td>
-                    <img src="images/<?= $product->image ?>" width="120" alt="">
+                    <img src="images/<?= $product->hinh ?>" width="120" alt="">
                 </td>
+                <td><?= $product->gia ?></td>
+                <td><?= $product->soluong ?></td>
+                <td><?= $product->maloai ?></td>
                 <td>
                     <a href="/update-product?id=<?= $product->id ?>">Edit</a>
                     <a href="/delete-product?id=<?= $product->id ?>" onclick="return confirm('Ban co muon xoa khong?')">Delete</a>
-                </td>
+                </td>   
             </tr>
         <?php endforeach ?>
     </table>
