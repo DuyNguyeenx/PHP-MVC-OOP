@@ -14,7 +14,7 @@ class BaseModel
     public function __construct()
     {
         try {
-            $this->conn = new PDO("mysql:host=localhost; dbname=assignment_php2; charset=utf8", "root", "");
+            $this->conn = new PDO("mysql:host=localhost; dbname=ass_php2; charset=utf8", "root", "");
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             throw $e;
