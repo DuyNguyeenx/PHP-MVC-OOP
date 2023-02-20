@@ -21,9 +21,11 @@ Router::get('/signup',[HomeController::class,'signup']);
 Router::get('/signup',[HomeController::class,'check_signup']);
 Router::post('/post_comment', [HomeController::class, 'post_comment']);
 Router::get('/cart',[HomeController::class,'cart']);
-Router::post('/addProduct', [HomeController::class, 'addProduct']);
+Router::post('/addProduct', [HomeController::class, 'createProduct']);
 Router::get('/delete_cart', [HomeController::class, 'deleteCart']);
 Router::post('/change_cart', [HomeController::class, 'changeCart']);
+Router::post('/change_cart', [HomeController::class, 'changeCart']);
+Router::get('/log_out', [HomeController::class, 'delete_session']);
 
 //admin
 Router::get('/admin',[HomeController::class,'home']);

@@ -77,7 +77,7 @@ class HomeController extends Controller
     $Com->insert($data);
     header("location:/detail?id=$id_pro");
   }
-  public function addProduct(Request $request)
+  public function createProduct(Request $request)
   {
     $product = $request->getBody();
     if (!isset($_SESSION['products'])) {
@@ -89,7 +89,7 @@ class HomeController extends Controller
   public function cart(Request $request)
   {
     $cart = $_SESSION['products'];
-    $total = 0;
+    $total = 1000;
     
     $this->view('site/cart', ['cart' => $cart, 'total' => $total]);
   }
@@ -111,7 +111,8 @@ class HomeController extends Controller
   }
   public function delete_session()
   {
-    session_destroy();
+    // session_destroy();
+    unset($_SESSION['user']);
     header('location:/home');
   }
   public function home()
